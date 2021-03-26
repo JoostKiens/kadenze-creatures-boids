@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sea creatures fireworking like there's no tomorrow</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+  <script src="libraries/p5.js"></script>
+  <script src="libraries/p5.dom.js"></script>
+  <script src="Boid.js"></script>
+  <script src="Attractor.js"></script>
+  <script src="Target.js"></script>
+  <script src="Flock.js"></script>
+  <script src="sketch.js"></script>
+</head>
+<style>
+
+  html {
+    box-sizing: border-box;
+    background-color: #eee;
+  }
+
+  * {
+    box-sizing: inherit;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Lato, sans-serif;
+    font-weight: 300;
+  }
+
+  label {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 5px 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+
+  .Controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    padding: 10px;
+    min-height: 80px;
+  }
+
+  .Controls-label {
+    min-width: 100px;
+    text-align: right;
+  }
+
+  .Slider {
+    padding: 0 5px;
+  }
+</style>
+<body>
+
+  <div id="canvas">
+
+  </div>
+
+  <div class="Controls">
+    <label><span class="Controls-label">Separation:</span>
+      <span class="Slider" id="separation"></span>
+    </label>
+    <label><span class="Controls-label">Alignment:</span>
+      <span class="Slider" id="alignment"></span>
+    </label>
+    <label><span class="Controls-label">Cohesion:</span>
+      <span class="Slider" id="cohesion"></span>
+    </label>
+    <label><span class="Controls-label">Pursuit:</span>
+      <span class="Slider" id="pursuit"></span>
+    </label>
+    <label><span class="Controls-label">Maxspeed:</span>
+      <span class="Slider" id="maxspeed"></span>
+    </label>
+    <label><span class="Controls-label">Force:</span>
+      <span class="Slider" id="force"></span>
+    </label>
+  </div>
+
+</body>
+</html>
