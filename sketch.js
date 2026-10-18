@@ -58,6 +58,16 @@ function setup() {
     var b = new Boid(100, 100, random(1, 4), target)
     flock.addBoid(b)
   }
+
+  // Sliders now exist, so the controls have their real height
+  windowResized()
+}
+
+function windowResized() {
+  resizeCanvas(
+    windowWidth,
+    windowHeight - document.querySelector(".Controls").clientHeight
+  )
 }
 
 function mouseClicked(e) {

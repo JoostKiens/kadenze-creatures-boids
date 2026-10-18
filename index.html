@@ -17,6 +17,12 @@
   html {
     box-sizing: border-box;
     background-color: #eee;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  canvas {
+    display: block;
   }
 
   * {
@@ -26,6 +32,8 @@
   body {
     margin: 0;
     padding: 0;
+    height: 100%;
+    overflow: hidden;
     font-family: Lato, sans-serif;
     font-weight: 300;
   }
@@ -59,6 +67,32 @@
 
   .Slider {
     padding: 0 5px;
+  }
+
+  @media (max-width: 600px) {
+    .Controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 4px;
+      min-height: 0;
+    }
+
+    label {
+      padding: 2px;
+      font-size: 11px;
+    }
+
+    .Controls-label {
+      min-width: 70px;
+    }
+
+    .Slider {
+      padding: 0 2px;
+    }
+
+    .Slider input {
+      width: 80px;
+    }
   }
 </style>
 <body>
